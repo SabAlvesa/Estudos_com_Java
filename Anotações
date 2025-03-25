@@ -1,0 +1,102 @@
+PILHAS
+Pensa em uma pilha de pratos: você sempre coloca um novo prato no topo e, quando precisa pegar um, tira o de cima primeiro.
+
+Empilhar (push) 🍽️ → Adiciona um item no topo da pilha.
+Desempilhar (pop) 🛑 → Remove o item do topo da pilha.
+Olhar o topo (peek) 👀 → Apenas verifica o que está no topo, sem remover.
+
+
+Pilha segue a regra LIFO (Last In, First Out), ou seja, o último a entrar é o primeiro a sair.
+É útil para desfazer ações, resolver expressões matemáticas e lidar com recursão.
+import java.util.Stack;
+
+public class ExemploPilha {
+    public static void main(String[] args) {
+        Stack<String> pilha = new Stack<>();
+
+        // Adicionando elementos (push)
+        pilha.push("Prato 1");
+        pilha.push("Prato 2");
+        pilha.push("Prato 3");
+
+        System.out.println("Topo da pilha: " + pilha.peek()); // Mostra "Prato 3"
+
+        // Removendo elementos (pop)
+        System.out.println("Removendo: " + pilha.pop()); // Remove "Prato 3"
+
+        System.out.println("Nova pilha: " + pilha);
+    }
+}
+
+
+Vetores e matrizes são estruturas de dados
+Ou seja, vetores/matrizes são bons para acesso aleatório, enquanto pilhas são ótimas para controle de fluxo e processamento sequencial de dados.
+
+
+Pilha é uma forma de organizar os conjuntos de elementos seguindo uma ordem, o primeiro que entra é o último que sai LIFO Last  In, First Out
+
+Sempre tirar o último que eu coloquei
+
+
+Operações:
+Empilhar e desempilhar 
+pilha está vazia ou não
+Verificação de quem está no topo
+
+Empilhar = push
+Desempilhar = pop
+Topo =top
+Retorna a booleano verificação de quem está no topo = isEmpty
+É possível empilhar mais coisas = isFull
+
+
+Filas Lista FIFO (First In, First Out); 
+é uma estrutura mais intuitiva
+utilizando um vetor
+
+Situação onde a fila está vazia o primeiro e última posição aponta para o mesmo lugar. Os elementos que são inseridos vão para o final da fila.
+Se chegar na última posição pode voltar para o início, a terceira var é oq determina se uma fila está cheia ou vazia.
+
+Se for retirar sempre tirar na primeira posição e assim continuar a fila.
+
+
+Variáveis:
+
+primeira
+última
+
+Total = 0 (fila vazia
+Total = tamanho do meu vetor(fila cheia)
+
+A implementação pode ser ocorrer de forma estática(usando vetores) ou dinâmicas(lista de estrutura básica) os dados devem ser colocados (enfileirados) no final da lista e retirados (desenfileirados) do início da lista.
+
+
+
+• Sistemas operacionais, por exemplo, usam filas para regular a ordem em que as tarefas devem receber processamento e recursos devem ser alocados. Exemplos: • Escalonamento de serviços submetidos ao Sistema Operacional. • Sequência de trabalhos submetidos à impressora. • Fila de pacotes a serem transmitidos em uma rede. • Fila de mensagens que serão enviadas através de um servidor de e-mail.
+
+
+Fila Normal (Linear): Em uma fila normal, quando um item é removido da frente, a posição de memória onde ele estava é "liberada", mas o espaço não é reutilizado até que o restante dos elementos sejam deslocados para frente. Isso pode causar ineficiência no uso da memória.
+
+
+Fila Circular: A fila circular resolve esse problema reutilizando os espaços vazios. Quando um item é removido, o "começo" da fila avança e o próximo item é inserido na primeira posição disponível (após o último item na fila, criando um ciclo). Isso faz com que a fila nunca "perca" o espaço disponível e sempre use a memória de forma eficiente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Listas encadeadas / alocação dinâmica de memória:
+É uma estrutura que armazena elementos em determinada frequência;o  vetor é considerado uma lista.
+elementos que têm rótulos onde se tem uma ordem virtual-  lista encadeadas são boas para alocar virtualmente a memória(adicionar e remover elementos sobre demanda)
+
+pilhas e filas são estruturas que têm estratégias bem definidas para inserir e remover elementos e elas podem utilizar uma lista encadeada como uma estrutura de armazenamento
